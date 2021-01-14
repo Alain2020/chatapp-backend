@@ -1,0 +1,3 @@
+# Chat App
+this project is the backend of the chat app. check the front end [here](https://github.com/Alain2020/chatapp-frontend) <br/>
+I'm using Flask for the backbone of the server. for handling the socket I'm using [flask-socketio](https://flask-socketio.readthedocs.io/en/latest/). the front end is served from this server as static files. when the user opens the app, the server will send a file containing the frontend. the front end will make a connection to the server. after the connection is established, clients will emit an event to the server containing data that consist of username and room. the server will assign the clients to the room. the server will get the message from the clients and relay it to all of the connected clients in the same room.
